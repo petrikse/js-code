@@ -25,7 +25,7 @@ function guess() {
     if (userGuess == randomNumber) {
         result.textContent = "Correct! You guessed it!";
         score = score + 1
-        scoreText.textContent = "Score: " + score
+        score.textContent = "Score: " + score
     } else {
         result.textContent = "Wrong! Try again.";
     }
