@@ -25,6 +25,7 @@ function guess() {
     if (userGuess == randomNumber) {
         result.textContent = "Correct! You guessed it!";
         score = score + 1
+        scoreText.textContent = "Score: " + score;
     } else {
         result.textContent = "Wrong! Try again.";
     }
@@ -35,6 +36,7 @@ function resetGame() {
     document.getElementById("guess").value = "";
     document.getElementById("result").textContent = "";
 }
+
 let score = 0
 </script>
 
