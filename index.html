@@ -13,6 +13,7 @@
 
 <h1 id="result"></h1>
 <h2 id="score"></h2>
+<h3 id="points"></h3>
 
 <script>
 
@@ -20,6 +21,7 @@ alert("Cau ty cavo");
 
 let randomNumber = Math.floor(Math.random() * 10) + 1;
 let score = 0;
+let points = 100;
 
 function guess() {
 
@@ -31,8 +33,10 @@ function guess() {
         result.textContent = "Correct! You guessed it!";
         score = score + 1;
         scoreText.textContent = "Score: " + score;
+        points = points * 2;
     } else {
         result.textContent = "Wrong! Try again.";
+        points = points - 
     }
     randomNumber = Math.floor(Math.random() * 10) + 1;
 
