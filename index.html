@@ -34,12 +34,10 @@ function guess() {
     } else {
         result.textContent = "Wrong! Try again.";
         points = points - 50;
-         scoreText.textContent = "points: " + points;
     }
     randomNumber = Math.floor(Math.random() * 10) + 1;
 
     document.getElementById("guess").value = "";
-
 }
 
 </script>
