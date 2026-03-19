@@ -10,7 +10,6 @@
 
 <input type="number" id="guess" placeholder="enter number">
 <button onclick="guess()">SUBMIT</button>
-<button onclick="resetGame()">RESET</button>
 
 <h1 id="result"></h1>
 <h2 id="score"></h2>
@@ -35,15 +34,10 @@ function guess() {
     } else {
         result.textContent = "Wrong! Try again.";
     }
-
-}
-
-function resetGame() {
-
     randomNumber = Math.floor(Math.random() * 10) + 1;
 
     document.getElementById("guess").value = "";
-    document.getElementById("result").textContent = "";
+
 }
 
 </script>
