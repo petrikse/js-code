@@ -12,7 +12,7 @@
 <button onclick="guess()">SUBMIT</button>
 
 <h1 id="result"></h1>
-<h2 id="points"></h2>
+<h2 scoreText.textContent = "points: " + points;></h2>
 
 <script>
 
@@ -34,6 +34,7 @@ function guess() {
     } else {
         result.textContent = "Wrong! Try again.";
         points = points = - 50 
+        scoreText.textContent = "points: " + points;
     }
     randomNumber = Math.floor(Math.random() * 10) + 1;
 
