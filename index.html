@@ -10,34 +10,40 @@
 
 <input type="number" id="guess" placeholder="enter number">
 <button onclick="guess()">SUBMIT</button>
+<button onclick="resetGame()">RESET</button>
 
 <h1 id="result"></h1>
-<h2 id="points"></h2>
+<h2 id="score"></h2>
 
 <script>
 
 alert("Cau ty cavo");
 
 let randomNumber = Math.floor(Math.random() * 10) + 1;
-let points = 100;
+let score = 0;
 
 function guess() {
 
     let userGuess = Number(document.getElementById("guess").value);
     let result = document.getElementById("result");
-    let scoreText = document.getElementById("points");
+    let scoreText = document.getElementById("score");
 
     if (userGuess == randomNumber) {
         result.textContent = "Correct! You guessed it!";
-        points = points * 2;
-        scoreText.textContent = "points: " + points;
+        score = score + 1;
+        scoreText.textContent = "Score: " + score;
     } else {
         result.textContent = "Wrong! Try again.";
-        points = points - 50;
     }
+
+}
+
+function resetGame() {
+
     randomNumber = Math.floor(Math.random() * 10) + 1;
 
     document.getElementById("guess").value = "";
+    document.getElementById("result").textContent = "";
 }
 
 </script>
