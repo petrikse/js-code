@@ -1,4 +1,4 @@
-<DOCTYPE HTML>
+<DOCTYPE html>
 <html>
 <head>
 <title>Guess the number</title>
@@ -26,6 +26,7 @@ let points = 0;
 function guess() {
 
     let userGuess = Number(document.getElementById("guess").value);
+    let bet = Number(document.getElementById("bet").value);
     let result = document.getElementById("result");
     let scoreText = document.getElementById("points");
 
@@ -36,7 +37,6 @@ function guess() {
     } else {
         result.textContent = "Wrong! Try again.";
     }
-
 }
 
 function resetGame() {
@@ -45,7 +45,6 @@ function resetGame() {
 
     document.getElementById("guess").value = "";
     document.getElementById("result").textContent = "";
-    document.getElementById("bet").textcontent = "";
     document.getElementById("bet").value = "";
 }
 
