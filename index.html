@@ -11,7 +11,7 @@
 <input type="number" id="guess" placeholder="enter number">
 <button onclick="guess()">SUBMIT</button>
 <button onclick="resetGame()">RESET</button>
-<input type="number" id="bet" placeholder="enter number">
+<input type="number" id="bet" placeholder="bet">
 
 <h1 id="result"></h1>
 <h2 id="points"></h2>
@@ -37,6 +37,7 @@ function guess() {
     } else {
         result.textContent = "Wrong! Try again.";
         points = points - bet;
+        scoreText.textContent = "points: " + points;
     }
 }
 
