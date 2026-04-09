@@ -21,7 +21,7 @@
 alert("Cau ty cavo");
 
 let randomNumber = Math.floor(Math.random() * 10) + 1;
-let points = 0;
+let points = 100;
 
 function guess() {
 
@@ -36,6 +36,7 @@ function guess() {
         scoreText.textContent = "points: " + points;
     } else {
         result.textContent = "Wrong! Try again.";
+        points = points - bet;
     }
 }
 
